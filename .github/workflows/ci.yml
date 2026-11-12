@@ -19,9 +19,9 @@ jobs:
         env: [relay_esp32, relay]
     steps:
       # The relay builds from the libraries of node-firmware, which must sit next to it.
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with: { path: relay-firmware }
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with: { repository: Terra-Watch/node-firmware, path: node-firmware }
       - uses: actions/setup-python@v5
         with: { python-version: "3.11" }
