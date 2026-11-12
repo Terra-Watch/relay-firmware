@@ -25,7 +25,7 @@ jobs:
         with: { repository: Terra-Watch/node-firmware, path: node-firmware }
       - uses: actions/setup-python@v5
         with: { python-version: "3.11" }
-      - uses: actions/cache@v4
+      - uses: actions/cache@v6
         with:
           path: ~/.platformio
           key: pio-${{ runner.os }}-${{ hashFiles('relay-firmware/platformio.ini') }}
